@@ -22,7 +22,7 @@ jobs:
       - name: Extract updated dependency
         id: deps
         run: |
-          # Extract the dependency name from the PR title
+          # Extract the dependency name from the PR title  
           # Example: "build(deps): Bump github.com/cosmos/cosmos-sdk from 0.46.0 to 0.47.0"
           # Extracts "github.com/cosmos/cosmos-sdk" and "0.47.0"
           echo "name=$(echo "${{ github.event.pull_request.title }}" | cut -d ' ' -f 3)" >> $GITHUB_OUTPUT
